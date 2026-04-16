@@ -1,0 +1,46 @@
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+
+    .page-logo {
+        width: 157px;
+
+        &_image {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .header-actions {
+        align-items: center;
+        display: flex;
+
+        &__item {
+            align-items: center;
+            display: flex;
+            margin-right: 10px;
+
+            svg {
+                font-size: 20px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 25px;
+            }
+
+            span {
+                margin-right: 6px;
+            }
+
+            h4 {
+                color: #252525;
+            }
+        }
+
+        &__btn {
+        }
+    }
+}
