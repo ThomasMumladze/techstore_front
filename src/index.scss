@@ -1,0 +1,15 @@
+@use "./assets/font/font";
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "cairo", sans-serif;
+}
