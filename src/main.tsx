@@ -1,7 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.scss";
 import App from "./App.tsx";
+
+import "./index.scss";
+import "./styles/components/_navigation.scss";
+import "./styles/components/_dropDawnMenu.scss";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
