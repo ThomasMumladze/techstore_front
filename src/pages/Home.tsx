@@ -14,15 +14,17 @@ const Home = () => {
             <section className="hero">
                 <div className="col-1" ref={dropdownRef}>
                     <button className="col-1__btn" onClick={toggleDropdown}>
-                        {isOpen ? <HiMenu /> : <HiMenuAlt1 />} categories
+                        {!isOpen ? <HiMenu /> : <HiMenuAlt1 />} categories
                     </button>
-                    <DropDawnMenu isOpen={isOpen} />
+                    <DropDawnMenu isOpen={!isOpen} />
                 </div>
                 <div className="col-2">
                     <div className="col-2__search">
                         <input type="text" placeholder="search product" />
                         <button>Search</button>
                     </div>
+
+                    <div className="col-2__item"></div>
                 </div>
             </section>
         </React.Fragment>
