@@ -1,5 +1,3 @@
-import "../styles/components/_navigation.scss";
-
 const Navigation = () => {
     return (
         <nav className="navigation">
