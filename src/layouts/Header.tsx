@@ -1,7 +1,7 @@
 import logo from "../assets/images/logo.png";
 import Navigation from "../components/Navigation";
 
-import { IoIosBookmark } from "react-icons/io";
+import { FaHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
             <div className="header-actions">
                 <div className="header-actions__item">
                     <button className="header-actions__btn">
-                        <IoIosBookmark />
+                        <FaHeart />
                     </button>
                 </div>
 
