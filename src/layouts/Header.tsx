@@ -26,7 +26,7 @@ const Header = () => {
                 </div>
 
                 <div className="header-actions__item header-actions__price">
-                    <span>span:</span>
+                    <span>total:</span>
                     <h4>$159.99</h4>
                 </div>
             </div>
