@@ -3,15 +3,21 @@ import "../styles/components/_navigation.scss";
 const Navigation = () => {
     return (
         <nav className="navigation">
-            <ul>
-                <li>
-                    <a href="">shop</a>
+            <ul className="navigation_list">
+                <li className="navigation_list__list-item">
+                    <a className="active" href="">
+                        shop
+                    </a>
                 </li>
-                <li>
-                    <a href="">about</a>
+                <li className="navigation_list__list-item">
+                    <a className="active" href="">
+                        about
+                    </a>
                 </li>
-                <li>
-                    <a href="">contact</a>
+                <li className="navigation_list__list-item">
+                    <a className="active" href="">
+                        contact
+                    </a>
                 </li>
             </ul>
         </nav>

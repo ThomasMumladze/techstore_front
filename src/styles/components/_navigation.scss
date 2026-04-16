@@ -1,2 +1,26 @@
 .navigation {
+    &_list {
+        display: flex;
+        gap: 50px;
+
+        &__list-item {
+            a {
+                font-size: 0.9rem;
+                color: #252525;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 2px;
+                transition:
+                    all,
+                    0.3s ease-in-out;
+                padding: 5px 0;
+                display: block;
+            }
+
+            .active {
+                color: #7fad39;
+                text-decoration: underline;
+            }
+        }
+    }
 }
