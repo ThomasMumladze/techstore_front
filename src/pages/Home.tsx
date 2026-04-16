@@ -4,14 +4,18 @@ import DropDawnMenu from "../components/DropDawnMenu";
 
 import { HiMenu } from "react-icons/hi";
 import { HiMenuAlt1 } from "react-icons/hi";
-import useDropdown from "../hooks/useDropdown";
 import { Link } from "react-router";
+
+import useDropdown from "../hooks/useDropdown";
 
 import asus from "../assets/images/asus-rog.svg";
 import logitech from "../assets/images/logitech-gaming-2.svg";
 import nvidia from "../assets/images/nvidia-7.svg";
 import msi from "../assets/images/msi-gaming.svg";
 import dell from "../assets/images/Dell_Logo.svg.png";
+
+import { FaHeart } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Home = () => {
     const { dropdownRef, isOpen, toggleDropdown } = useDropdown();
@@ -76,6 +80,32 @@ const Home = () => {
                             </h5>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            <section className="featured-products">
+                <h1 className="featured-products__title">Featured Products</h1>
+
+                <div className="featured-products__grid">
+                    <div className="featured-products__item">
+                        <Link to={""}>
+                            <img
+                                src="https://imgstore.alta.ge/images/cdc0d35a-f051-49da-bb18-df6f56d59b70_Thumb.jpeg"
+                                alt="..."
+                            />
+
+                            <p>Intel COre i7 9700K</p>
+                            <h5>499.99$</h5>
+                        </Link>
+                        <div className="feature-products__actions">
+                            <button>
+                                <FaHeart />
+                            </button>
+                            <button>
+                                <FaCartShopping />
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </React.Fragment>
