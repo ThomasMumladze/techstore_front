@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import logo from "../assets/images/logo.png";
 import Navigation from "../components/Navigation";
 
@@ -8,7 +10,9 @@ const Header = () => {
     return (
         <header className="header">
             <div className="page-logo">
-                <img src={logo} alt="..." className="page-logo_image" />
+                <Link to={"/"}>
+                    <img src={logo} alt="..." className="page-logo_image" />
+                </Link>
             </div>
             <Navigation />
 
