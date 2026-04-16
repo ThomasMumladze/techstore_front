@@ -1,5 +1,11 @@
 .drop-dawn-menu {
-    max-width: 25%;
+    margin-top: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-15px);
+    transition: 0.15s ease-in-out;
+    visibility: hidden;
+    width: 100%;
 
     &_list {
         box-shadow: 0 0 12px 0 #ebebeb;
@@ -14,10 +20,6 @@
             text-transform: capitalize;
             transition: 0.15s ease-in-out;
 
-            &:not(:last-child) {
-                margin-bottom: 4px;
-            }
-
             &:hover {
                 background-color: #7fad39;
                 color: #fff;
@@ -25,4 +27,11 @@
             }
         }
     }
+}
+
+.drop-dawn-menu-open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0px);
+    visibility: visible;
 }

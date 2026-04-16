@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const useDropdown = () => {
     //component state to track dropdown open/close status
@@ -8,16 +8,25 @@ const useDropdown = () => {
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     //toggle dropdown open/close
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleDropdown = useCallback(() => {
+        setIsOpen((state) => !state);
+    }, []);
 
     //set dropdown to close
-    const closeDropdown = () => {
+    const closeDropdown = useCallback(() => {
         setIsOpen(false);
-    };
+    }, []);
 
     useEffect(() => {
+        // Close dropdown when component unmounts
+        return () => {
+            closeDropdown();
+        };
+    }, [closeDropdown]);
+
+    useEffect(() => {
+        if (!isOpen) return;
+
         // handle outside click & close dropdown
         const handleOutsideClick = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -25,16 +34,13 @@ const useDropdown = () => {
             }
         };
 
-        //check if dropdown is open and add event listener for outside clicks
-        if (isOpen) {
-            document.addEventListener("mousedown", handleOutsideClick);
-        }
+        document.addEventListener("mousedown", handleOutsideClick);
 
         // Cleanup event listener on unmount or when dropdown is closed
         return () => {
             document.removeEventListener("mousedown", handleOutsideClick);
         };
-    }, [isOpen]);
+    }, [isOpen, closeDropdown]);
 
     return { isOpen, toggleDropdown, dropdownRef };
 };

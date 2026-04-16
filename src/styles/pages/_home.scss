@@ -1,0 +1,29 @@
+.hero {
+    align-items: center;
+    display: flex;
+    .col-1 {
+        width: 30%;
+        &__btn {
+            align-items: center;
+            background: #7fad39;
+            color: #ffffff;
+            display: flex;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            justify-content: flex-start;
+            position: relative;
+            padding: 10px 25px 10px 40px;
+            text-transform: capitalize;
+            width: 100%;
+
+            svg {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .col-2 {
+        width: 70%;
+    }
+}

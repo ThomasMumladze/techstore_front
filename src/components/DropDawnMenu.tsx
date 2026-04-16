@@ -1,13 +1,12 @@
 interface Props {
-    dropdownRef: React.RefObject<HTMLDivElement>;
     isOpen: boolean;
 }
 
 const DropDawnMenu = (props: Props) => {
-    const { dropdownRef, isOpen } = props;
+    const { isOpen } = props;
 
     return (
-        <div className={`drop-dawn-menu ${isOpen ? "open" : "closed"}`} ref={dropdownRef}>
+        <div className={`drop-dawn-menu ${isOpen ? "drop-dawn-menu-open" : ""}`}>
             <ul className="drop-dawn-menu_list">
                 <li>Accessories</li>
                 <li>Cables </li>
