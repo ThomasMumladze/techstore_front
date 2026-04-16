@@ -1,0 +1,28 @@
+.drop-dawn-menu {
+    max-width: 25%;
+
+    &_list {
+        box-shadow: 0 0 12px 0 #ebebeb;
+        border: 1px solid #ebebeb;
+        border-radius: 4px;
+        width: 100%;
+
+        li {
+            background-color: #f2f5f8;
+            cursor: pointer;
+            padding: 3px 9px;
+            text-transform: capitalize;
+            transition: 0.15s ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+
+            &:hover {
+                background-color: #7fad39;
+                color: #fff;
+                padding-left: 16px;
+            }
+        }
+    }
+}
