@@ -1,10 +1,13 @@
-import Navigation from "./components/Navigation";
+import React from "react";
+import Header from "./layouts/Header";
 
 function App() {
     return (
-        <>
-            <Navigation />
-        </>
+        <React.Fragment>
+            <Header />
+
+            <main style={{ height: "100vh" }}></main>
+        </React.Fragment>
     );
 }
 
