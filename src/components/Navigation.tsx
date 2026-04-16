@@ -1,21 +1,23 @@
+import { Link } from "react-router";
+
 const Navigation = () => {
     return (
         <nav className="navigation">
             <ul className="navigation_list">
                 <li className="navigation_list__list-item">
-                    <a className="active" href="">
+                    <Link className="active" to="/shop">
                         shop
-                    </a>
+                    </Link>
                 </li>
                 <li className="navigation_list__list-item">
-                    <a className="active" href="">
+                    <Link className="active" to="/about">
                         about
-                    </a>
+                    </Link>
                 </li>
                 <li className="navigation_list__list-item">
-                    <a className="active" href="">
+                    <Link className="active" to="/contact">
                         contact
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
