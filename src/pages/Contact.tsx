@@ -1,6 +1,35 @@
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { CiClock2 } from "react-icons/ci";
+import { MdOutlineMail } from "react-icons/md";
+
 const Contact = () => {
     return (
         <div className="contact-page">
+            <div className="contact-page__contact-info">
+                <div>
+                    <FaPhoneAlt />
+                    <h4>phone</h4>
+                    <p>+995 599 59 59 59</p>
+                </div>
+
+                <div>
+                    <FaMapMarkerAlt />
+                    <h4>address</h4>
+                    <p>tbilisi georgia</p>
+                </div>
+                <div>
+                    <CiClock2 />
+                    <h4>open time</h4>
+                    <p>10:00 am to 23:00pm</p>
+                </div>
+                <div>
+                    <MdOutlineMail />
+                    <h4>Email</h4>
+                    <p>hello@gmail.com</p>
+                </div>
+            </div>
+
             <div className="contact-page__map">
                 <iframe
                     width="100%"
