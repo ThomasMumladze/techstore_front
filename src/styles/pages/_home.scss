@@ -1,6 +1,8 @@
 .hero {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
+    gap: 30px;
+
     .col-1 {
         width: 30%;
         &__btn {
@@ -25,5 +27,35 @@
 
     .col-2 {
         width: 70%;
+
+        &__search {
+            align-items: center;
+            display: flex;
+            height: 48px;
+            width: 100%;
+
+            input {
+                border: solid 1px #ccc;
+                color: #b2b2b2;
+                font-size: 16px;
+                height: 100%;
+                padding-left: 20px;
+                outline: none;
+                width: 100%;
+            }
+
+            button {
+                border: solid 1px #7fad39;
+                background: #7fad39;
+                border: none;
+                color: #ffffff;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 800;
+                height: 100%;
+                padding: 13px 30px 12px;
+                text-transform: uppercase;
+            }
+        }
     }
 }

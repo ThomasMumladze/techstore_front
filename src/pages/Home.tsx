@@ -18,7 +18,12 @@ const Home = () => {
                     </button>
                     <DropDawnMenu isOpen={isOpen} />
                 </div>
-                <div className="col-2"></div>
+                <div className="col-2">
+                    <div className="col-2__search">
+                        <input type="text" placeholder="search product" />
+                        <button>Search</button>
+                    </div>
+                </div>
             </section>
         </React.Fragment>
     );
