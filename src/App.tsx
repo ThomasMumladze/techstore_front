@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "./layouts/Header";
+import { Outlet } from "react-router";
 
 function App() {
     return (
         <React.Fragment>
-            <Header />
-
-            <main style={{ height: "100vh" }}></main>
+            <Outlet />
         </React.Fragment>
     );
 }
