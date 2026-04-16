@@ -9,6 +9,9 @@ import { Link } from "react-router";
 
 import asus from "../assets/images/asus-rog.svg";
 import logitech from "../assets/images/logitech-gaming-2.svg";
+import nvidia from "../assets/images/nvidia-7.svg";
+import msi from "../assets/images/msi-gaming.svg";
+import dell from "../assets/images/Dell_Logo.svg.png";
 
 const Home = () => {
     const { dropdownRef, isOpen, toggleDropdown } = useDropdown();
@@ -21,6 +24,18 @@ const Home = () => {
         {
             name: "logitech",
             img: logitech,
+        },
+        {
+            name: "nvidia",
+            img: nvidia,
+        },
+        {
+            name: "msi",
+            img: msi,
+        },
+        {
+            name: "dell",
+            img: dell,
         },
     ];
 
@@ -52,14 +67,16 @@ const Home = () => {
             </section>
 
             <section className="brand">
-                {brands?.map((brand) => (
-                    <div className="brand__item" key={brand.name}>
-                        <img src={brand.img} alt={brand.name} />
-                        <h5>
-                            <Link to={``}>{brand.name}</Link>
-                        </h5>
-                    </div>
-                ))}
+                <div className="brand__slider">
+                    {brands?.map((brand) => (
+                        <div className="brand__item" key={brand.name}>
+                            <img src={brand.img} alt={brand.name} />
+                            <h5>
+                                <Link to={``}>{brand.name}</Link>
+                            </h5>
+                        </div>
+                    ))}
+                </div>
             </section>
         </React.Fragment>
     );
