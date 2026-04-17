@@ -14,9 +14,8 @@ import nvidia from "../assets/images/nvidia-7.svg";
 import msi from "../assets/images/msi-gaming.svg";
 import dell from "../assets/images/Dell_Logo.svg.png";
 
-import { FaHeart } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
 import Button from "../components/Button";
+import Card from "../components/Card";
 
 const Home = () => {
     const { dropdownRef, isOpen, toggleDropdown } = useDropdown();
@@ -91,25 +90,15 @@ const Home = () => {
                 <h1 className="featured-products__title">Featured Products</h1>
 
                 <div className="featured-products__grid">
-                    <div className="featured-products__item">
-                        <Link to={""}>
-                            <img
-                                src="https://imgstore.alta.ge/images/cdc0d35a-f051-49da-bb18-df6f56d59b70_Thumb.jpeg"
-                                alt="..."
-                            />
+                    <Card />
+                </div>
+            </section>
 
-                            <p>Intel COre i7 9700K</p>
-                            <h5>499.99$</h5>
-                        </Link>
-                        <div className="feature-products__actions">
-                            <button>
-                                <FaHeart />
-                            </button>
-                            <button>
-                                <FaCartShopping />
-                            </button>
-                        </div>
-                    </div>
+            <section className="product-sales">
+                <h1 className="product-sales__title">sales</h1>
+
+                <div className="product-sales__grid">
+                    <Card />
                 </div>
             </section>
         </React.Fragment>
