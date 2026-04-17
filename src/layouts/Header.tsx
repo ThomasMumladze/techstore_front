@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import logo from "../assets/images/logo.png";
 import Navigation from "../components/Navigation";
@@ -7,6 +7,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 
 const Header = () => {
+    const location = useLocation().pathname;
     return (
         <header className="header">
             <div className="page-logo">
@@ -14,7 +15,7 @@ const Header = () => {
                     <img src={logo} alt="..." className="page-logo_image" />
                 </Link>
             </div>
-            <Navigation />
+            <Navigation locationPath={location} />
 
             <div className="header-actions">
                 <div className="header-actions__item">

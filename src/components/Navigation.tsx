@@ -1,21 +1,26 @@
 import { Link } from "react-router";
 
-const Navigation = () => {
+interface Props {
+    locationPath: string;
+}
+
+const Navigation = (props: Props) => {
+    const { locationPath } = props;
     return (
         <nav className="navigation">
             <ul className="navigation_list">
                 <li className="navigation_list__list-item">
-                    <Link className="active" to="/shop">
+                    <Link className={`${locationPath == "/shop" ? "active" : ""}`} to="/shop">
                         shop
                     </Link>
                 </li>
                 <li className="navigation_list__list-item">
-                    <Link className="active" to="/about">
+                    <Link className={`${locationPath == "/about" ? "active" : ""}`} to="/about">
                         about
                     </Link>
                 </li>
                 <li className="navigation_list__list-item">
-                    <Link className="active" to="/contact">
+                    <Link className={`${locationPath == "/contact" ? "active" : ""}`} to="/contact">
                         contact
                     </Link>
                 </li>
