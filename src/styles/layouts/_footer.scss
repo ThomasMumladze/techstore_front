@@ -1,0 +1,34 @@
+footer {
+    background-color: #f3f6fa;
+    padding: 22px 0px;
+    width: 100%;
+
+    .footer-content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        @media (min-width: 1200px) {
+            max-width: 1140px;
+        }
+
+        > div {
+            a {
+                display: block;
+                margin-bottom: 15px;
+                width: 157px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: #1c1c1c;
+                line-height: 36px;
+                list-style: none;
+            }
+        }
+    }
+}

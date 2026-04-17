@@ -16,6 +16,7 @@ import dell from "../assets/images/Dell_Logo.svg.png";
 
 import { FaHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
+import Button from "../components/Button";
 
 const Home = () => {
     const { dropdownRef, isOpen, toggleDropdown } = useDropdown();
@@ -47,15 +48,15 @@ const Home = () => {
         <React.Fragment>
             <section className="hero">
                 <div className="col-1" ref={dropdownRef}>
-                    <button className="col-1__btn" onClick={toggleDropdown}>
+                    <Button onClick={toggleDropdown} className="col-1__btn">
                         {!isOpen ? <HiMenu /> : <HiMenuAlt1 />} categories
-                    </button>
+                    </Button>
                     <DropDawnMenu isOpen={!isOpen} />
                 </div>
                 <div className="col-2">
                     <div className="col-2__search">
                         <input type="text" placeholder="search product" />
-                        <button>Search</button>
+                        <Button>search</Button>
                     </div>
 
                     <div className="col-2__item">
@@ -64,7 +65,10 @@ const Home = () => {
                             <h2>
                                 High-Performance <br /> Components
                             </h2>
-                            <Link to={"/shop"}>shop now</Link>
+
+                            <Button>
+                                <Link to={"/shop"}>shop now</Link>
+                            </Button>
                         </div>
                     </div>
                 </div>

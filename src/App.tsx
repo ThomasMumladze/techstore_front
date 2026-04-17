@@ -8,7 +8,7 @@ function App() {
         <React.Fragment>
             <Header />
 
-            <main style={{ height: "100vh" }}>
+            <main>
                 <Outlet />
             </main>
 
