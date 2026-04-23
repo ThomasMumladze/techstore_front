@@ -93,14 +93,6 @@ const Home = () => {
                     <Card />
                 </div>
             </section>
-
-            <section className="product-sales">
-                <h1 className="product-sales__title">sales</h1>
-
-                <div className="product-sales__grid">
-                    <Card />
-                </div>
-            </section>
         </React.Fragment>
     );
 };
