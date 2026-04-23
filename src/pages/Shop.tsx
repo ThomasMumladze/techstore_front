@@ -9,7 +9,6 @@ const Shop = () => {
         data: data,
         itemsPerPage: 18,
     });
-    console.log(data);
 
     return (
         <React.Fragment>
@@ -51,7 +50,7 @@ const Shop = () => {
                                         key={index}
                                         onClick={() => {
                                             setCurrentPage(page as number);
-                                            scrollTo({ top: 0, behavior: "smooth" });
+                                            // scrollTo({ top: 0, behavior: "smooth" });
                                         }}
                                         className={page === currentPage ? "active" : ""}
                                     >
