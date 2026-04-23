@@ -1,0 +1,85 @@
+.shop-page {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 32px;
+    margin: 0 auto;
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+
+    section {
+        &:first-child {
+            flex: 2.5;
+        }
+        &:last-child {
+            flex: 7.5;
+        }
+
+        .__filter-body {
+            h4 {
+                font-size: 16px;
+                padding-left: 4px;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+            }
+        }
+
+        .__products-body {
+            &--sorter {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 12px;
+
+                .product-founded--sum {
+                    align-items: center;
+                    display: flex;
+                    gap: 6px;
+
+                    h6 {
+                        font-size: 16px;
+                        color: #111111;
+                    }
+
+                    span {
+                        color: #b2b2b2;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            &--product-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-column-gap: 25px;
+                grid-row-gap: 25px;
+                margin-bottom: 32px;
+            }
+
+            &--pagination {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                button {
+                    background-color: #f1f1f1;
+                    border: 1px solid #cbd5e1;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    padding: 6px 10px;
+                }
+
+                .active {
+                    background-color: #fff;
+                    color: #005fcc;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
