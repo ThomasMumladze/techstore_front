@@ -5,20 +5,21 @@
     margin-top: 0px;
 
     .col-1 {
-        width: 30%;
+        width: 25%;
 
         &__btn {
-            display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 12px;
-            width: 100%;
-            margin-bottom: 6px;
             background: #7fad39;
             color: #fff;
-            font-size: 18px;
+            display: flex;
             font-weight: 700;
+            font-size: 18px;
+            gap: 12px;
+            justify-content: flex-start;
+            margin-bottom: 6px;
+            padding: 10px 30px 10px;
             text-transform: capitalize;
+            width: 100%;
 
             svg {
                 font-size: 25px;
@@ -27,7 +28,7 @@
     }
 
     .col-2 {
-        width: 70%;
+        width: 75%;
 
         &__search {
             display: flex;
@@ -149,8 +150,7 @@
 
 /* ================= FEATURED PRODUCTS ================= */
 
-.featured-products,
-.product-sales {
+.featured-products {
     &__title {
         margin-bottom: 40px;
         text-align: center;
